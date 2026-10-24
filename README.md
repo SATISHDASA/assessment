@@ -80,9 +80,9 @@ Evidence, assumptions, source details, test results, calculations, and limitatio
 
 **Repository:** https://github.com/SATISHDASA/assessment
 
-**Release:** [round2-submission](https://github.com/SATISHDASA/assessment/tree/round2-submission)
+**Release:** [round2-submission](https://github.com/SATISHDASA/assessment/releases/tag/round2-submission)
 
-**Final evidence commit:** [628a7aa](https://github.com/SATISHDASA/assessment/commit/628a7aa)
+**Final commit:** [5a11eb9](https://github.com/SATISHDASA/assessment/commit/5a11eb9)
 
 The release tag identifies the submitted revision for review.
 
