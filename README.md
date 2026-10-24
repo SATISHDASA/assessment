@@ -1,21 +1,18 @@
 # Round 2 Assessment — B.Tech CSE (AI & ML)
 
-**Candidate:** Satish Dasa  
 **Programme:** B.Tech Computer Science and Engineering (AI & ML)  
 **Institution:** IFHE Hyderabad  
 **Batch:** 2023–2027
 
 ## About this repository
 
-This repository contains my Round 2 assessment submissions, including a workflow improvement prototype and a curriculum audit.
+This repository contains both assignments for the Round 2 recruitment assessment.
 
 ## Repository structure
 
 ```text
 assessment/
-│
 ├── README.md
-│
 ├── Task1_Assignment_Workflow/
 │   ├── README.md
 │   ├── index.html
@@ -24,7 +21,6 @@ assessment/
 │   ├── 07-final-report.md
 │   ├── evidence/
 │   └── tests/
-│
 └── Task2_Curriculum_Audit/
     ├── README.md
     ├── report/
@@ -32,41 +28,64 @@ assessment/
     └── tools/
 ```
 
-*The Task 2 folder structure will be updated when those deliverables are added.*
-
 ## Task 1 — AssignmentFlow
 
 A browser-based prototype exploring improvements to the assignment submission and acknowledgement workflow.
 
-**Key features:**
-- Physical assignment submission receipt tracking.
-- Duplicate submission detection.
-- Search and status filtering.
-- Demonstration status progression.
-- CSV export.
+Includes:
+- AS-IS and proposed workflow documentation.
+- Inputs, statuses, ownership, approval boundaries, and fallback.
+- Duplicate detection, search, status filtering, and CSV export.
+- Synthetic test records and execution evidence.
+- Illustrative time-saving calculation.
 
-**How to run:** Open `Task1_Assignment_Workflow/index.html` in a browser. See its README for instructions and limitations.
+**Test limitations:** Unauthorized-action testing was not possible because authentication and role controls are not implemented. Failed-step recovery was not tested. These limitations are documented in the test plan.
 
-Test execution results and screenshots are available in the Task 1 folder.
+To run: Open `Task1_Assignment_Workflow/index.html` in a browser.
 
-## Task 2 — Curriculum Audit
+## Task 2 — AI/ML Curriculum Audit
 
-This section will document the curriculum audit for the B.Tech CSE (AI & ML) programme, including curriculum analysis, industry job description comparison, AI-assisted subject review, and proposed curriculum improvements.
+A preliminary curriculum audit and redesign proposal based on the available IcfaiTech Student Handbook 2023–24 extract, selected industry job descriptions, and AI-assisted subject reviews.
 
-*Deliverables and supporting evidence will be added here.*
+Includes:
+- Semester-wise curriculum and credit baseline.
+- Industry job-description analysis.
+- KEEP, UPDATE, REDUCE, and ADD recommendations.
+- Five AI-assisted subject reviews with prompts and verification notes.
+- Proposed curriculum changes and prerequisite considerations.
+- AssignmentFlow-based capstone proposal.
+- Interactive credit calculator.
+- Source and repository evidence.
+
+**Limitations:** Only one handbook page was available. The credit-total discrepancy is documented and requires institutional confirmation. The audit is not a verified review of the complete batch-specific syllabus or regulations. Recommendations require academic review.
+
+Open `Task2_Curriculum_Audit/README.md` for the detailed contents.
 
 ## Tools and methodology
 
-- HTML, CSS and JavaScript for the Task 1 prototype.
-- Git and GitHub for version control and project submission.
-- Source-based analysis and clearly identified assumptions.
-- Manual prototype testing with synthetic records.
+- HTML, CSS, and JavaScript.
+- Git and GitHub.
+- Synthetic records for prototype testing.
+- AI assistance for curriculum review, with human verification and limitations documented.
 
-## Limitations and academic integrity
+## Personal contribution and AI use
 
-- AssignmentFlow is an independent academic prototype, not an official institutional system.
-- All demonstration records are synthetic.
-- Student-reported process observations are distinguished from institutionally verified information.
-- Impact estimates are illustrative, not measured institutional outcomes.
-- Curriculum recommendations will be distinguished from official curriculum requirements and verified source material.
+The workflow investigation, prototype assembly, documentation, testing, curriculum analysis, recommendations, and repository preparation were completed as assessment work. AI assistance was used to support drafting and analysis; generated suggestions were reviewed and are not presented as official institutional information.
 
+## Evidence and limitations
+
+Evidence, assumptions, source details, test results, calculations, and limitations are documented in the respective task folders. No private student records or credentials are intentionally included.
+
+## Final submission revision
+
+**Repository:** https://github.com/SATISHDASA/assessment
+
+**Release:** [round2-submission](https://github.com/SATISHDASA/assessment/tree/round2-submission)
+
+**Final evidence commit:** [628a7aa](https://github.com/SATISHDASA/assessment/commit/628a7aa)
+
+The release tag identifies the submitted revision for review.
+
+---
+
+**Assessment status:** Both task folders and their current evidence have been pushed to this repository. Recruitment portal submission and confirmation must be completed separately.
