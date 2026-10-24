@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AssignmentFlow | Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">ACADEMIC WORKFLOW PROTOTYPE</p>
+      <h1>AssignmentFlow</h1>
+      <p class="subhead">A simple tracking layer for physical assignment submissions</p>
+    </div>
+    <div class="demo-tag">DEMO · SYNTHETIC DATA</div>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <strong>Prototype only.</strong> This demo stores data in this browser using localStorage.
+      It has no real authentication, server, institutional integration, or secure access control.
+      Do not enter real student names, IDs, marks, or private information.
+    </section>
+
+    <section class="stats" aria-label="Summary">
+      <article class="stat"><span>Total records</span><strong id="totalCount">0</strong></article>
+      <article class="stat"><span>Submitted</span><strong id="submittedCount">0</strong></article>
+      <article class="stat"><span>Under evaluation</span><strong id="evaluationCount">0</strong></article>
+      <article class="stat"><span>Feedback published</span><strong id="feedbackCount">0</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">RECORD A RECEIPT</p><h2>New submission</h2></div>
+        <span class="small-note">Use fictional demo values</span>
+      </div>
+      <form id="submissionForm">
+        <div class="form-grid">
+          <label>Assignment ID<input id="assignmentId" required placeholder="e.g. CSE201-A1"></label>
+          <label>Course code<input id="courseCode" required placeholder="e.g. CSE201"></label>
+          <label>Student reference<input id="studentRef" required placeholder="e.g. DEMO-001"></label>
+          <label>Submission date<input id="submissionDate" type="date" required></label>
+          <label>Receipt reference<input id="receiptRef" required placeholder="e.g. REG-001"></label>
+          <label>Faculty reference<input id="facultyRef" required placeholder="e.g. FAC-DEMO-01"></label>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Record submission</button>
+          <button type="reset" class="secondary">Clear form</button>
+        </div>
+        <p id="formMessage" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TRACKING REGISTER</p><h2>Submission records</h2></div>
+        <div class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search records…" aria-label="Search records">
+          <select id="statusFilter" aria-label="Filter by status">
+            <option value="">All statuses</option>
+            <option>SUBMITTED</option>
+            <option>NEEDS_CLARIFICATION</option>
+            <option>UNDER_EVALUATION</option>
+            <option>EVALUATED</option>
+            <option>FEEDBACK_PUBLISHED</option>
+            <option>REJECTED</option>
+            <option>FAILED_RETRY</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Assignment</th><th>Course</th><th>Student ref.</th><th>Submitted</th><th>Receipt</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+      <p id="emptyState" class="empty-state">No records match. Add a demo submission above or clear the filters.</p>
+      <div class="bottom-actions">
+        <button id="loadDemo" class="secondary">Load synthetic examples</button>
+        <button id="exportCsv" class="secondary">Export CSV</button>
+        <button id="resetDemo" class="danger">Reset demo data</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">WORKFLOW NOTES</p>
+      <h2>Roles and fallback</h2>
+      <div class="info-grid">
+        <div><h3>Subject faculty</h3><p>Records physical receipt, checks clarification, evaluates work, and decides when feedback is published.</p></div>
+        <div><h3>Student</h3><p>Can use the reference number to ask about their own submission. This prototype does not implement real student login.</p></div>
+        <div><h3>Fallback</h3><p>If this demo is unavailable, continue the existing paper register and LMS process. Reconcile records later.</p></div>
+      </div>
+    </section>
+    <footer>AssignmentFlow · Student-designed workflow concept · Not an official IFHE/IcfaiTech system</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
