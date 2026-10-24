@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Curriculum Credit Calculator</title>
+<style>
+body { font-family: Arial; max-width: 650px; margin: 40px auto; padding: 20px; }
+input { padding: 8px; width: 100px; }
+button { padding: 9px 16px; margin-top: 12px; }
+.result { margin-top: 20px; padding: 15px; background: #eef3f8; }
+</style>
+</head>
+<body>
+<h1>Curriculum Credit Calculator</h1>
+<p>Illustrative review percentage: 20%</p>
+
+<label>Baseline credits:</label>
+<input id="credits" type="number" value="161" min="1">
+
+<button onclick="calculate()">Calculate</button>
+
+<div class="result" id="result">
+Target review credits: 32.2
+</div>
+
+<script>
+function calculate() {
+  const credits = Number(document.getElementById("credits").value);
+  const result = document.getElementById("result");
+
+  if (credits <= 0 || !Number.isFinite(credits)) {
+    result.textContent = "Enter a valid positive credit total.";
+    return;
+  }
+
+  const target = credits * 0.20;
+  result.textContent =
+    "20% review target: " + target.toFixed(1) +
+    " credits (approximately " + Math.round(target) +
+    " whole credits). This is a review target, not additional credits.";
+}
+calculate();
+</script>
+</body>
+</html>
